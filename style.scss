@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700;900&display=swap');
+
+$primary-color: #ED7839;
+$background-color: #FDF1EB;
+$text-grey-color: #5C5C5C;
+$stronger-grey-color: #4E4E4E;
+$nav-title-grey: #725C5C;
+$user-info: #333333; 
+$border-color: #E7E7E7;
+
+@mixin text-styles($family: 'Roboto', $weight: 500, $size: 0.875em, $line: 1.1875em, $color: $text-grey-color) {
+    font-family: $family, sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+
+    color: $color;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#grey-title{
+    @include text-styles($weight: 400, $size: 1.375em, $line: 1.5625em, $color: $nav-title-grey);
+}
+
+.orange-title{
+    @include text-styles($weight: 900, $size: 1.25em, $line: 125%, $color: $primary-color);
+    letter-spacing: 0.05em;
+}
+
+.orange-text{
+    @include text-styles($weight: 700, $size: 1em, $line: 1.25em, $color: $primary-color);
+}
+
+.grey-text{
+    @include text-styles($family: 'Quicksand', $weight: 400, $size: 0.875em, $line: 1em, $color: $nav-title-grey);
+}
+
+.bold{
+    font-weight: 700;
+}
+.small{
+    font-size: 0.75em;
+}
+
+.big-grey-text{
+    @include text-styles($size: 1.25em, $line: 1.5625em, $color: $stronger-grey-color);
+}
+
+#see-more{
+    @include text-styles($family: 'Quicksand', $weight: 700, $size: 0.875em, $line: 1.3125em, $color: $primary-color);
+}
+
+#discussion-component{
+    p{
+        line-height: 1.1875em;
+        text-align: center;
+    }
+}
+
+#logo-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 13.75em;
+    height: 4.25em;
+
+    background: rgb(255,179,84);
+    background: linear-gradient(180deg, rgba(255,179,84,1) 0%, rgba(238,122,58,1) 100%);
+
+    padding: 0 1.5em;
+
+    h1{
+        @include text-styles($weight: 700, $size: 1.875em, $line: 2.1875em, $color: #fff);
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+    height: 4.25em;
+
+    padding-right: 2em;
+
+    background: $background-color;
+
+    #user-info-section{
+        display: flex;
+
+        #infos{
+            display: flex;
+            align-items: center;
+
+            div:first-child{
+                margin: 0 1em;
+            }
+        }
+
+        small{
+            font-size: 0.75em;
+            line-height: 0.9375em;
+        }
+    }
+}
+
+#principal{
+    display: flex;
+}
+
+#side-navigation{
+    display: flex;
+    flex-direction: column;
+
+    width: 13.75em;
+
+    #links{
+        display: flex;
+        flex-direction: column;
+    
+        li{
+            @include text-styles('Quicksand', 500, 0.9375em, 1.1875em, $nav-title-grey);
+    
+            border-bottom: 0.125em solid $border-color;
+
+            padding-top: .5em;
+            padding-bottom: .5em;
+            padding-left: 1.5em;
+    
+            cursor: pointer;
+        }
+
+        .active{
+            border-left-width: 0.3125em;
+            border-right-width: 0;
+            border-style: solid;
+            border-image: 
+              linear-gradient(
+                to top, 
+                rgba(255,179,84,1),
+                rgba(238,122,58,1)
+              ) 1 100%;
+
+            background: $background-color;
+        }
+    }
+}
+
+#circle-image{
+    img{
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+    }
+}
