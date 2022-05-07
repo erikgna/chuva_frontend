@@ -38,7 +38,7 @@ $border-color: #E7E7E7;
 }
 
 .grey-text{
-    @include text-styles($family: 'Quicksand', $weight: 400, $size: 0.875em, $line: 1em, $color: $nav-title-grey);
+    @include text-styles($family: 'Quicksand', $weight: 400, $size: 0.875em, $line: 1.375em, $color: $nav-title-grey);
 }
 
 .bold{
@@ -99,6 +99,9 @@ nav{
             align-items: center;
 
             div:first-child{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
                 margin: 0 1em;
             }
         }
@@ -106,6 +109,186 @@ nav{
         small{
             font-size: 0.75em;
             line-height: 0.9375em;
+        }
+    }
+}
+
+.title-background{
+    background: $background-color;
+
+    padding: 0.75em 1em;
+    margin-bottom: 1em;
+}
+
+.topic-container{
+    display: flex;
+    flex-direction: column;
+
+    border: 0.0625em solid #ECECEC;
+    border-radius: 0.1875em;
+
+    padding-bottom: 1em;
+    margin-top: 2em;
+
+    .resume-padding{
+        padding: 0 1em;
+    }
+
+
+}
+
+.discussion{
+    div:nth-child(2){
+        align-self: center;
+        text-align: center;
+    
+        max-width: 40em;
+    }
+
+    #share-images{
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+
+        img:nth-child(2){
+            margin: 0 3.5em;
+        }
+    }
+
+    #button-divider{
+        width: 100%;
+    
+        display: flex;
+        align-items: center;
+    
+        align-self: center;
+    
+        padding: 0 1em;
+        margin-top: 1em;
+    
+        button{
+            min-width: 9em;
+
+            display: flex;
+            align-items: center;
+
+            background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+            
+            border: none;
+            border-radius: .25em;
+    
+            outline: none;
+    
+            padding: .5em 1em;
+    
+            font-size: .925em;
+            color: #fff;
+            line-height: 1em;
+            font-weight: 700;
+            font-family: 'Quicksand', sans-serif;
+    
+            cursor: pointer;
+        }
+    
+        div:first-child, div:last-child{
+            width: 100%;
+            height: 1px;
+            background: $border-color;
+        }
+    }
+    .ask-box{
+        margin: 1em 1em;
+        padding: 1em 1.5em;
+
+        border: 0.0625em solid #E7E7E7;
+        border-radius: .25em;
+
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+
+        strong{
+            padding-top: .25em;
+            padding-bottom: .5em;
+        }
+
+        .actions-buttons{
+            display: flex;
+            align-items: center;
+
+            margin-top: 1em;
+
+            p:last-child{
+                padding-left: 1.5em;
+            }
+        
+            .dots{
+                display: flex;
+                flex-direction: column;
+        
+                div{
+                    background: $primary-color;
+        
+                    width: .25em;
+                    height: .25em;
+        
+                    border-radius: 50%;
+                }
+        
+                div:nth-child(2){
+                    margin: .25em 0;
+                }
+            }
+
+            .shadow{
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+            
+                border-radius: .125em;
+
+                margin: 0 1.5em;
+            }
+        }
+
+    }
+}
+
+.body-section{
+    display: flex;
+}
+
+.orange-button{
+    display: flex;
+    align-items: center;
+
+    font-size: 1em;
+    color: #fff;
+    line-height: 1.0675em;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+
+    background: $primary-color;
+    border: none;
+    border-radius: .25em;
+
+    outline: none;
+
+    padding: .5em 1em;
+
+    cursor: pointer;
+}
+
+.icon{
+    color: #fff;
+
+    font-size: 1em;
+    line-height: 1.375em;
+    letter-spacing: 0.01em;
+}
+
+#details-section{
+    div:first-child{
+        display: flex;
+
+        button:nth-child(2){
+            margin: 0 .5em;
         }
     }
 }
