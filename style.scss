@@ -25,7 +25,7 @@ $border-color: #E7E7E7;
 }
 
 #grey-title{
-    @include text-styles($weight: 400, $size: 1.375em, $line: 1.5625em, $color: $nav-title-grey);
+    @include text-styles($weight: 400, $size: 1.375em, $line: 1.25em, $color: $nav-title-grey);
 }
 
 .orange-title{
@@ -54,6 +54,8 @@ $border-color: #E7E7E7;
 
 #see-more{
     @include text-styles($family: 'Quicksand', $weight: 700, $size: 0.875em, $line: 1.3125em, $color: $primary-color);
+
+    cursor: pointer;
 }
 
 #discussion-component{
@@ -81,24 +83,53 @@ $border-color: #E7E7E7;
     }
 }
 
+#select{
+    height: 2em;
+
+    padding: 0 0.5em;
+    border-radius: 0.125em;
+
+    display: flex;
+    align-items: center;
+    outline: none;
+    background: $background-color;
+    border: 0.0416em solid #cccccc;
+
+    select{
+        border: none;
+        outline: none;
+        background: $background-color;
+
+        font-size: 14px;
+        font-family: 'Quicksand';
+        line-height: 17.5px;
+        font-weight: 400;
+        color: $text-grey-color;
+
+        margin-left: 4px;
+    }
+}
+
 nav{
     display: flex;
     justify-content: space-between;
 
     height: 4.25em;
 
-    padding-right: 2em;
+    padding: 0 2em;
+    margin-bottom: 1.5em;
 
     background: $background-color;
 
     #user-info-section{
         display: flex;
+        align-items: center;
 
         #infos{
             display: flex;
             align-items: center;
 
-            div:first-child{
+            #contact-texts{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
@@ -137,6 +168,84 @@ nav{
 
 }
 
+#more-topic{
+    display: none;
+    flex-direction: column;
+    
+
+    padding: 0 1em;
+
+    p{
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+
+        #content-textarea{
+            display: flex;
+            flex-direction: column;
+            
+            input, textarea{
+                border: 0.0416em solid #cccccc;
+                border-radius: 0.125em;
+
+                padding: 1em 0.66em;
+                
+                @include text-styles($family: 'Quicksand', $weight: 400, $size: 0.875em, $line: 1.375em, $color: $nav-title-grey);
+            
+                outline: none;
+                resize: none;
+            }
+
+            label{
+                @include text-styles($weight: 700, $size: 0.875em, $line: 0.7916em, $color: $primary-color);
+                
+                padding-bottom: .5em;
+                padding-top: 0.75em;
+            }
+
+            > div{
+                display: flex;
+                flex-direction: column;
+            }
+
+            #textarea-options{
+                padding-left: 2em;
+
+                height: 2em;
+                
+                border-radius: 0 0 .25em .25em;
+                border: 0.0625em solid #cccccc;
+                border-top: none;
+
+                background: #EAF1F2;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .fa-bold{
+                    margin-right: 2em;
+                }
+
+                .text-area-button{
+                    border-radius: 0;
+                    background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+                
+                    font-family: 'Quicksand';
+                    font-weight: 700;
+                    font-size: 0.9375em;
+                    line-height: 1em;
+                    color: #fff;
+
+                    padding: .5em 4em;
+                }
+            }
+        }
+    }
+}
+
 .discussion{
     div:nth-child(2){
         align-self: center;
@@ -166,7 +275,7 @@ nav{
         margin-top: 1em;
     
         button{
-            min-width: 9em;
+            min-width: 9.15em;
 
             display: flex;
             align-items: center;
@@ -197,13 +306,25 @@ nav{
         }
     }
     .ask-box{
+        cursor: pointer;
+
         margin: 1em 1em;
-        padding: 1em 1.5em;
 
         border: 0.0625em solid #E7E7E7;
         border-radius: .25em;
 
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+
+        .grey-text{
+            padding: 0 1.5em;
+            padding-top: .25em;
+        }
+
+        .orange-text{
+            margin-top: 1em;
+            margin-bottom: .25em;
+            padding-left: 1.30em;
+        }
 
         strong{
             padding-top: .25em;
@@ -215,6 +336,8 @@ nav{
             align-items: center;
 
             margin-top: 1em;
+            margin-left: 1.5em;
+            margin-bottom: 1em;
 
             p:last-child{
                 padding-left: 1.5em;
@@ -250,8 +373,11 @@ nav{
     }
 }
 
-.body-section{
+#body-section{
     display: flex;
+
+    padding-right: 2em;
+    padding-left: 2.5em;
 }
 
 .orange-button{
@@ -283,12 +409,237 @@ nav{
     letter-spacing: 0.01em;
 }
 
-#details-section{
-    div:first-child{
-        display: flex;
+#video{
+    margin-top: 1em;
 
-        button:nth-child(2){
-            margin: 0 .5em;
+    @include text-styles($size: 1.5em, $weight: 900, $line: 1.5em, $color: #fff);
+    #circle-avatar{
+        width: 4.5em;
+        height: 4.5em;
+
+        padding: 0.125em;
+        margin-right: 0.83em;
+
+        border-radius: 50%;
+        border: 0.125em solid #ED7839;
+    }
+
+    #overlay{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 100%;
+        width: 100%;
+
+        padding-top: 2em;
+        padding-bottom: 2.6em;
+        padding-left: 2em;
+        padding-right: 1em;
+
+        h1{
+            font-size: 1.4em;
+        }
+        h2{
+            font-size: 1em;
+        }
+        h3{
+            font-size: 0.83em;
+        }
+        > div{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    #video-img{
+        background: url('https://s3-alpha-sig.figma.com/img/5bfb/31cb/42637d3b5568ea4df9235ef41b8fbf5b?Expires=1652659200&Signature=bIimAgO9sM8c5Ao~BZ5QmlGsdFzofyASsxr2kg1~Ow8Ftk96WzGRBrRIrTyOg91Gpg1Snb2BAoHhdidbtYNhFkmpvrMM328KKvy5Ursnh45Ah5PmCYs2LAKT1~zkpzAFg4sC6F0RpvaMnOTsy36Q5fD4OnFmc0C9CSqI9EeqJzS0QJjyOZwWQCYvgDs5YDy7im2WYgPfkhr6shGxy43gZxwcKU2-GasWmyEKr4v3J71Rq9rfQJx08GDDwKSaf8q16pIWdD4~xxpH6lY3GE-za81oAPcwx4NgvT2LC59vY2PdJ8ZtnHU98xJKhxwGp10ENDAeQuhbuRmDfapHCWAZMw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
+        background-size: cover;
+        width: 32.5em;
+        height: 18.291em;
+        position: relative;
+
+        *{
+            z-index: 10;
+        }
+    }
+    #video-img::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(141, 53, 6, 0.5);
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+}
+
+#send-button{
+    min-width: 11.7em !important;
+}
+
+#sended-topic{
+    display: none;
+    text-align: center;
+    
+    .grey-text{
+        margin: 1em 0;
+    }
+
+    a{
+        font-family: 'Quicksand', sans-serif;
+        color: $primary-color;
+        font-size: .875em;
+        font-weight: 500;
+    }
+
+    .created{
+        position: relative;
+        text-align: start;
+
+        .blur-content{
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+
+            width: 100%;
+        }
+    }
+
+    .created::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: .7;
+        position: absolute;
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .overlay-text{
+        width: 100%;
+        height: 1px;
+        top: -6.5em;
+        position: relative;
+
+        text-align: center;
+
+        z-index: 10;
+
+        .fa-check-double{
+            font-size: 1.5em;
+            color: $text-grey-color;
+        }
+
+        h2{
+            font-size: 1em;
+            font-weight: 700;
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.25em;
+            color: $text-grey-color;
+
+            margin: .5em 0;
+        }
+    }
+}
+
+.comment{
+    display: none;
+    flex-direction: column;
+
+    padding-bottom: 2em;
+    padding-top: 1.5em;
+
+    border-top: 0.175em solid $border-color;
+}
+
+.author{
+    background: #F8F8F8;
+    
+    > div{
+        justify-content: space-between;
+        
+        padding-right: 1.5em;
+
+        .fa-check-double{
+            margin-left: 1em;
+            font-size: 1.5em;
+            color: $primary-color;
+        }
+
+        .orange-text{
+            margin: 0 !important;
+        }
+    }
+    div {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+#details-section{
+    margin-left: 2em;
+
+    #details-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        div:first-child{
+            display: flex;
+    
+            button:nth-child(2){
+                margin: 0 .5em;
+            }
+        }
+    }
+
+    .orange-text{
+        margin-top: .75em;
+        margin-bottom: .25em;
+    }
+
+    #details-component{
+        width: 15.125em;
+
+        border: 1px solid #ECECEC;
+        border-radius: 0.1875em;
+    
+        div:last-child{
+            display: flex;
+
+
+            padding-left: 1em;
+            padding-right: .4em;
+            padding-bottom: 1em;
+        
+            #low-grey{
+                background: #e7e7e7;
+                width: 0.125em;
+                height: 20em;
+            
+                padding: 0;
+                margin-left: .5em;
+
+                #strong-grey{
+                    background: #bfbfbf;
+
+                    width: 0.125em;
+                    height: 12.5em;
+
+                    padding: 0;
+                }
+            }
+        }
+
+        #authors{
+            margin: 1em 0;
         }
     }
 }
@@ -304,6 +655,8 @@ nav{
     width: 13.75em;
 
     #links{
+        margin-top: 1em;
+
         display: flex;
         flex-direction: column;
     
@@ -336,9 +689,38 @@ nav{
 }
 
 #circle-image{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    #circle-counter{
+        top: .5em;
+        position: relative;
+
+        width: 1.15em;
+        height: 1.15em;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+        
+        background: #F85959;
+
+        @include text-styles('Roboto', 700, .625em, .75em, #fff);
+    }
+    
     img{
-        width: 4em;
-        height: 4em;
+        width: 2em;
+        height: 2em;
         border-radius: 50%;
     }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2.33em;
 }

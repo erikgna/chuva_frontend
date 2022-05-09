@@ -6,6 +6,41 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="reset.css" type="text/css">
     <script src="https://kit.fontawesome.com/a374591c01.js" crossorigin="anonymous"></script>
+    <script>
+        function showMore(){
+            document.getElementById('more').innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.
+
+            Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.
+
+            Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.
+
+            Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. `
+        }
+        function newTopic(){
+            document.getElementById('less-topic').style.display = 'none'
+            document.getElementById('more-topic').style.display = 'flex'
+        }
+        function newTopicAgain(){
+            document.getElementById('more-topic').style.display = 'flex'
+            document.getElementById('sended-topic').style.display = 'none'
+        }
+        function sendTopic(){
+            document.getElementById('more-topic').style.display = 'none'
+            document.getElementById('sended-topic').style.display = 'block'
+        }
+        function handleComments(showing){
+            const comments = document.getElementsByClassName('comment')
+            if(comments[0].style.display == '' || comments[0].style.display == 'none'){
+                for(let i = 0; i < comments.length; i++){
+                    comments[i].style.display = 'flex'
+                }
+            } else {
+                for(let i = 0; i < comments.length; i++){
+                    comments[i].style.display = 'none'
+                }
+            }
+        }
+    </script>
     <title>Chuva</title>
 </head>
     <body>
@@ -35,15 +70,24 @@
                         <p class="grey-text">ISSN: 1234-5678</p>
                     </div>
                     <div id="user-info-section">
-                        <select name="language-picker">
-                            <option lang="pt" value="portuguese" selected>PT,BR</option>
-                        </select>
+                        <div id="select">
+                            <i class="fa-solid fa-globe"></i>
+                            <select name="language-picker">
+                                <option lang="pt" value="portuguese" selected>
+                                    <i class="fa-solid fa-globe"></i>
+                                    PT,BR
+                                </option>
+                            </select>
+                        </div>
                         <div id="infos">
-                            <div>
+                            <div id="contact-texts">
                                 <p class="grey-text">Bem-vindo!</p>
                                 <small class="grey-text">alguem12@galoascience.com</small>
                             </div>
                             <div id="circle-image">
+                                <div id="circle-counter">
+                                    2
+                                </div>
                                 <img src="https://s3-alpha-sig.figma.com/img/dd4d/7489/333e944668ee350c3f8ececc8f76b048?Expires=1652659200&Signature=RCFaG8rIHKudk1LD6th6hBcn~X1WgyEE9TH0EqgZoF48ToDa0~J83BzKD5HPuqg1~KaNVWSqBkyva5I3sfF5PxCGH5B~xmxQ2IVZ1B1LKY2iM2a1AMV6XFd1gkvVTqZ2ppUhvpx3GzUxaCPKJvr4rSSzP-p-msGPECpuj5y-3YnkxJAizdBmgZj8U2qpencqKk9C47RmZqo97eRrS3S3TBZnRIRaUnsLslokS05nYxHWKmu~3ui791wq192YRaHtxypFul2NJ~AzRrC1VV6g6JtFsfOgRLnKmL~5ZGyH4k-FDtWwi1Kz9bkM~YOTTIiRC0tS1gxhKQvBam-wLzNWdg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Profile Picture">
                             </div>
                         </div>
@@ -51,39 +95,112 @@
 
                 <div id="body-section">
                     <div>
-                        <div>
-                            <h2 class="orange-title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </h2>
-                            <img src="https://s3-alpha-sig.figma.com/img/5bfb/31cb/42637d3b5568ea4df9235ef41b8fbf5b?Expires=1652659200&Signature=bIimAgO9sM8c5Ao~BZ5QmlGsdFzofyASsxr2kg1~Ow8Ftk96WzGRBrRIrTyOg91Gpg1Snb2BAoHhdidbtYNhFkmpvrMM328KKvy5Ursnh45Ah5PmCYs2LAKT1~zkpzAFg4sC6F0RpvaMnOTsy36Q5fD4OnFmc0C9CSqI9EeqJzS0QJjyOZwWQCYvgDs5YDy7im2WYgPfkhr6shGxy43gZxwcKU2-GasWmyEKr4v3J71Rq9rfQJx08GDDwKSaf8q16pIWdD4~xxpH6lY3GE-za81oAPcwx4NgvT2LC59vY2PdJ8ZtnHU98xJKhxwGp10ENDAeQuhbuRmDfapHCWAZMw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="">
+                        <h2 class="orange-title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </h2>
+                        <div id="video">
+                            <div id="video-img">
+                                <div id="overlay">
+                                    <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </h2>
+                                    <div>
+                                        <img id="circle-avatar" src="image.png" alt="">
+                                        <div>
+                                            <h1>Beatriz Christiane Melo</h1>
+                                            <h3>FCA / Universidade Estadual de Campinas</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="topic-container">
                             <div class="title-background">
                                 <h3 class="big-grey-text">Resumo</h3>
                             </div>
-                            <p class="grey-text resume-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant... <strong id="see-more">ver mais</strong></p>
+                            <p id="more" class="grey-text resume-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant...<strong id="see-more" onclick="showMore()">ver mais</strong></p>
                         </div>
                         <div class="topic-container discussion">
                             <div class="title-background">
                                 <h3 class="big-grey-text">Discussões</h3>
                             </div>
-                            <div>
-                                <h2 class="orange-title">Compartilhe suas ideias ou dúvidas com os autores!</h2>
-                                <div id="share-images">
-                                    <img src="icone1.png" alt="">
-                                    <img src="icone2.png" alt="">
-                                    <img src="icone3.png" alt="">
+
+                            <div id="less-topic">
+                                <div>
+                                    <h2 class="orange-title">Compartilhe suas ideias ou dúvidas com os autores!</h2>
+                                    <div id="share-images">
+                                        <img src="icone1.png" alt="">
+                                        <img src="icone2.png" alt="">
+                                        <img src="icone3.png" alt="">
+                                    </div>
+                                    <p class="grey-text">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
                                 </div>
-                                <p class="grey-text">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
-                            </div>
-                            <div id="button-divider">
-                                <div></div>
-                                <button>
-                                    <i class="fa-solid fa-plus icon" style="margin-right: .5em;"></i>
-                                    criar tópico
-                                </button>
-                                <div></div>
+
+                                <div id="button-divider">
+                                    <div></div>
+                                    <button onclick="newTopic()">
+                                        <i class="fa-solid fa-plus icon" style="margin-right: .5em;"></i>
+                                        criar tópico
+                                    </button>
+                                    <div></div>
+                                </div>
                             </div>
 
-                            <div class="ask-box">
+                            <div id="more-topic">
+                                <p class="grey-text">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+                                <form>
+                                    <div id="content-textarea">
+                                        <label for="assunto" class="topic-label">Assunto</label>
+                                        <input type="text" name="assunto" id="topic-input" placeholder="Defina um tópico sucinto para notificar os autores...">
+                                        <div>
+                                            <label for="conteudo" class="content-label">Conteúdo</label>
+                                            <textarea name="conteudo" id="content" cols="30" rows="10"></textarea>
+                                            <div id="textarea-options">
+                                                <div>
+                                                    <i class="fa-solid fa-bold"></i>
+                                                    <i class="fa-solid fa-italic"></i>
+                                                </div>
+                                                <input type="button" onclick="sendTopic()" class="orange-button text-area-button" value="Enviar" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </form>
+                            </div>
+
+                            <div id="sended-topic">
+                                <h2 class="orange-text">Seu tópico foi enviado com sucesso! :D</h2>
+                                <p class="grey-text">Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+                                <a href="#" class="orange-link">Descubra outros trabalhos!</a>
+                                <div id="button-divider">
+                                    <div></div>
+                                    <button onclick="newTopicAgain()" id="send-button">
+                                        <i class="fa-solid fa-plus icon" style="margin-right: .5em;"></i>
+                                        criar novo tópico
+                                    </button>
+                                    <div></div>
+                                </div>
+
+                                <div class="ask-box created">
+                                    <div class="blur-content">
+                                        <h2 class="orange-text">Assunto da pergunta aparece aqui</h2>
+                                        <strong class="grey-text bold">Carlos Henrique Santos</strong>
+                                        <p class="grey-text">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+                                        <div class="actions-buttons">
+                                            <div class="dots">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <button class="orange-button shadow"><i class="fa-solid fa-heart icon"></i></button>
+                                            <p class="grey-text">1 like</p>
+                                            <p class="grey-text">1 resposta</p>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-text">
+                                        <i class="fa-solid fa-check-double" style="font-size: 1.25em"></i>
+                                        <h2>Aguardando feedback dos autores</h2>
+                                        <a href="#">Editar tópico</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ask-box" onclick="handleComments()">
                                 <h2 class="orange-text">Assunto da pergunta aparece aqui</h2>
                                 <strong class="grey-text bold">Carlos Henrique Santos</strong>
                                 <p class="grey-text">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
@@ -97,9 +214,48 @@
                                     <p class="grey-text">1 like</p>
                                     <p class="grey-text">1 resposta</p>
                                 </div>
+                                <div class="comment author">
+                                    <div>
+                                        <strong class="grey-text bold">Adriano da Silva</strong>
+                                        <div>
+                                            <h2 class="orange-text">Autor</h2>
+                                            <i class="fa-solid fa-check-double"></i>
+                                        </div>
+                                    </div>                                    
+                                    <p class="grey-text">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                                </div>
+                                <div class="comment">
+                                    <strong class="grey-text bold">Carlos Henrique Santos</strong>
+                                    <p class="grey-text">Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.
+                                        <br>
+                                        <br>Obrigada pela resposta, muito interessante o seu trabalho! </p>
+                                </div>
+                                <div class="comment author">
+                                    <div>
+                                        <strong class="grey-text bold">Carmila Ferreira Andrade</strong>
+                                        <div>
+                                            <h2 class="orange-text">Autor</h2>
+                                            <i class="fa-solid fa-check-double" style="font-size: 1.25em"></i>
+                                        </div>
+                                    </div>                                    
+                                    <p class="grey-text">Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                                        <br>
+                                        <br>
+                                        Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                                </div>
+                                <div class="comment author">
+                                    <div>
+                                        <strong class="grey-text bold">Ana Carolina</strong>
+                                        <div>
+                                            <h2 class="orange-text">Autor</h2>
+                                            <i class="fa-solid fa-check-double" style="font-size: 1.25em"></i>
+                                        </div>
+                                    </div>                                    
+                                    <p class="grey-text">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                                </div>
                             </div>
 
-                            <div class="ask-box">
+                            <div class="ask-box" onclick="handleComments()">
                                 <h2 class="orange-text">Assunto da pergunta aparece aqui</h2>
                                 <strong class="grey-text bold">Carlos Henrique Santos</strong>
                                 <p class="grey-text">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
@@ -112,6 +268,45 @@
                                     <button class="orange-button shadow"><i class="fa-solid fa-heart icon"></i></button>
                                     <p class="grey-text">1 like</p>
                                     <p class="grey-text">1 resposta</p>
+                                </div>
+                                <div class="comment author">
+                                    <div>
+                                        <strong class="grey-text bold">Adriano da Silva</strong>
+                                        <div>
+                                            <h2 class="orange-text">Autor</h2>
+                                            <i class="fa-solid fa-check-double"></i>
+                                        </div>
+                                    </div>                                    
+                                    <p class="grey-text">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                                </div>
+                                <div class="comment">
+                                    <strong class="grey-text bold">Carlos Henrique Santos</strong>
+                                    <p class="grey-text">Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.
+                                        <br>
+                                        <br>Obrigada pela resposta, muito interessante o seu trabalho! </p>
+                                </div>
+                                <div class="comment author">
+                                    <div>
+                                        <strong class="grey-text bold">Carmila Ferreira Andrade</strong>
+                                        <div>
+                                            <h2 class="orange-text">Autor</h2>
+                                            <i class="fa-solid fa-check-double" style="font-size: 1.25em"></i>
+                                        </div>
+                                    </div>                                    
+                                    <p class="grey-text">Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                                        <br>
+                                        <br>
+                                        Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                                </div>
+                                <div class="comment author">
+                                    <div>
+                                        <strong class="grey-text bold">Ana Carolina</strong>
+                                        <div>
+                                            <h2 class="orange-text">Autor</h2>
+                                            <i class="fa-solid fa-check-double" style="font-size: 1.25em"></i>
+                                        </div>
+                                    </div>                                    
+                                    <p class="grey-text">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
                                 </div>
                             </div>
 
@@ -119,29 +314,42 @@
                     </div>
 
                     <div id="details-section">
-                        <div>
-                            <button class="orange-button">
-                                <i class="fa-solid fa-download icon" style="margin-right: .5em;"></i>
-                                Download
-                            </button>
-                            <button class="orange-button"><i class="fa-solid fa-star icon"></i></button>
-                            <button class="orange-button"><img src="doi.png" alt=""></button>
+                        <div id="details-buttons">
+                            <div>
+                                <button class="orange-button">
+                                    <i class="fa-solid fa-download icon" style="margin-right: .5em;"></i>
+                                    Download
+                                </button>
+                                <button class="orange-button"><i class="fa-solid fa-star icon"></i></button>
+                                <button class="orange-button"><img src="doi.png" alt=""></button>
+                            </div>
+                            <h6 class="orange-text">Como citar este trabalho?</h6>    
                         </div>
-                        <h6 class="orange-text">Como citar este trabalho?</h6>
                         <div id="details-component">
                             <div class="title-background">
                                 <h2 class="big-grey-text">Detalhes</h2>
                             </div>
                             <div>
-                                <p class="grey-text small">Tipo de Apresentação: <strong>Pôster</strong></p>
-                                <p class="grey-text small">Eixo temático: <strong>Alimentação e saúde (AS)</strong></p>
-                                <p class="grey-text small">Palavras-chaves: <strong>Alimentos</strong></p>
-                                <h5 class="grey-text bold">Autores:</h5>
-                                <p class="grey-text">Galileo Galilei</p>
-                                <p class="grey-text">Berta Lange  de Morreles</p>
-                                <p class="grey-text">Isaac Newton</p>
-                                <p class="grey-text">Cesar Lattes</p>
-                                <p class="grey-text">Stephen Hawking</p>
+                                <div>
+                                    <p class="grey-text small">Tipo de Apresentação: <strong>Pôster</strong></p>
+                                    <p class="grey-text small">Eixo temático: <strong>Alimentação e saúde (AS)</strong></p>
+                                    <p class="grey-text small">Palavras-chaves: <strong>Alimentos funcionais, alimentação escolar.</strong></p>
+                                    <div id="authors">
+                                        <h5 class="grey-text bold">Autores:</h5>
+                                        <p class="grey-text">Galileo Galilei</p>
+                                        <p class="grey-text">Berta Lange  de Morreles</p>
+                                        <p class="grey-text">Isaac Newton</p>
+                                        <p class="grey-text">Cesar Lattes</p>
+                                        <p class="grey-text">Stephen Hawking</p>    
+                                    </div>
+                                    <small class="grey-text small">Universidade Estadual de Campinas</small>
+                                    <small class="grey-text small">Universidade de São Paulo</small>
+                                    <small class="grey-text small">Instituto Nacional de Pesquisas Espaciais</small>
+                                    <small class="grey-text small"> Universidade Federal do Rio de Janeiro</small>
+                                </div>
+                                <div id="low-grey">
+                                    <div id="strong-grey"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,15 +360,7 @@
         </section>
 
         <footer>
-            <div>
-                <div>
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <p class="grey-text"><strong>Preservar a memória do evento e ampliar o acesso ao conhecimento científico</strong> gerado em eventos é a razão de ser da plataforma Galoá Proceedings.</p>
-                    <p class="grey-text">Os trabalhos publicados aqui têm maior alcance e ficam disponíveis para toda a comunidade científica, mantendo acesa o debate científico fomentado pelos encontros e aumentando o impacto  do evento.</p>
-                </div>
-            </div>
+            <img src="imagem - footer.png" alt="">
         </footer>
 
     </body>
