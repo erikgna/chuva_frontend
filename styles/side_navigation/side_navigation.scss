@@ -1,0 +1,76 @@
+@import '../font_styles/font_styles';
+
+#side-navigation {
+    display: flex;
+    flex-direction: column;
+  
+    width: 13.75em;
+
+    #logo-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        width: 13.75em;
+        height: 4.25em;
+      
+        background: rgb(255, 179, 84);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 179, 84, 1) 0%,
+          rgba(238, 122, 58, 1) 100%
+        );
+      
+        padding: 0 1.5em;
+      
+        h1 {
+          @include text-styles(
+            $weight: 700,
+            $size: 1.875em,
+            $line: 2.1875em,
+            $color: #fff
+          );
+        }
+      }
+  
+    #links {
+      margin-top: 1em;
+  
+      display: flex;
+      flex-direction: column;
+
+      list-style: none;
+  
+      li {
+        @include text-styles(
+          "Quicksand",
+          500,
+          0.9375em,
+          1.1875em,
+          $nav-title-grey
+        );
+  
+        border-bottom: 0.125em solid $border-color;
+  
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-left: 1.5em;
+  
+        cursor: pointer;
+      }
+  
+      .active {
+        border-left-width: 0.3125em;
+        border-right-width: 0;
+        border-style: solid;
+        border-image: linear-gradient(
+            to top,
+            rgba(255, 179, 84, 1),
+            rgba(238, 122, 58, 1)
+          )
+          1 100%;
+  
+        background: $background-color;
+      }
+    }
+  }

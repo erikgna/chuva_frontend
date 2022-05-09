@@ -1,0 +1,145 @@
+@import '../font_styles/font_styles';
+
+.topic-container {
+    display: flex;
+    flex-direction: column;
+  
+    border: 0.0625em solid #ececec;
+    border-radius: 0.1875em;
+  
+    padding-bottom: 1em;
+    margin-top: 2em;
+  
+    .title-background {
+        background: $background-color;
+      
+        padding: 0.75em 1em;
+        margin-bottom: 1em;
+    }
+      
+    .resume-padding {
+      padding: 0 1em;
+    }
+
+    #more-topic {
+        display: none;
+        flex-direction: column;
+      
+        padding: 0 1em;
+      
+        p {
+          text-align: center;
+        }
+      
+        form {
+          display: flex;
+          flex-direction: column;
+      
+          #content-textarea {
+            display: flex;
+            flex-direction: column;
+      
+            input,
+            textarea {
+              border: 0.0416em solid #cccccc;
+              border-radius: 0.125em;
+      
+              padding: 1em 0.66em;
+      
+              @include text-styles(
+                $family: "Quicksand",
+                $weight: 400,
+                $size: 0.875em,
+                $line: 1.375em,
+                $color: $nav-title-grey
+              );
+      
+              outline: none;
+              resize: none;
+            }
+      
+            label {
+              @include text-styles(
+                $weight: 700,
+                $size: 0.875em,
+                $line: 0.7916em,
+                $color: $primary-color
+              );
+      
+              padding-bottom: 0.5em;
+              padding-top: 0.75em;
+            }
+      
+            > div {
+              display: flex;
+              flex-direction: column;
+            }
+      
+            #textarea-options {
+              padding-left: 2em;
+      
+              height: 2em;
+      
+              border-radius: 0 0 0.25em 0.25em;
+              border: 0.0625em solid #cccccc;
+              border-top: none;
+      
+              background: #eaf1f2;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+      
+              .fa-bold {
+                margin-right: 2em;
+              }
+      
+              .text-area-button {
+                border-radius: 0;
+                background: linear-gradient(180deg, #feb154 0%, #f1833e 100%);
+      
+                font-family: "Quicksand";
+                font-weight: 700;
+                font-size: 0.9375em;
+                line-height: 1em;
+                color: #fff;
+      
+                padding: 0.5em 4em;
+              }
+            }
+          }
+        }
+      }
+      .comment {
+        display: none;
+        flex-direction: column;
+      
+        padding-bottom: 2em;
+        padding-top: 1.5em;
+      
+        border-top: 0.175em solid $border-color;
+      }
+      
+      .author {
+        background: #f8f8f8;
+      
+        > div {
+          justify-content: space-between;
+      
+          padding-right: 1.5em;
+      
+          .fa-check-double {
+            margin-left: 1em;
+            font-size: 1.5em;
+            color: $primary-color;
+          }
+      
+          .orange-text {
+            margin: 0 !important;
+          }
+        }
+        div {
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+  }

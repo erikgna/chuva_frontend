@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700;900&display=swap");
+#grey-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.375em;
+  line-height: 1.25em;
+  color: #725c5c;
+}
+
+.orange-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.25em;
+  line-height: 125%;
+  color: #ed7839;
+  letter-spacing: 0.05em;
+}
+
+.orange-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.25em;
+  color: #ed7839;
+}
+
+.grey-text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.375em;
+  color: #725c5c;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+.big-grey-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.5625em;
+  color: #4e4e4e;
+}
+
+#see-more {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.3125em;
+  color: #ed7839;
+  cursor: pointer;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 4.25em;
+  padding: 0 2em;
+  margin-bottom: 1.5em;
+  background: #fdf1eb;
+}
+
+nav #user-info-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav #user-info-section #select {
+  height: 2em;
+  padding: 0 0.5em;
+  border-radius: 0.125em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  background: #fdf1eb;
+  border: 0.0416em solid #cccccc;
+}
+
+nav #user-info-section #select select {
+  border: none;
+  outline: none;
+  background: #fdf1eb;
+  font-size: 14px;
+  font-family: "Quicksand";
+  line-height: 17.5px;
+  font-weight: 400;
+  color: #5c5c5c;
+  margin-left: 4px;
+}
+
+nav #user-info-section small {
+  font-size: 0.75em;
+  line-height: 0.9375em;
+}
+
+#circle-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#circle-image #circle-counter {
+  top: 0.5em;
+  position: relative;
+  width: 1.15em;
+  height: 1.15em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background: #f85959;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 0.625em;
+  line-height: 0.75em;
+  color: #fff;
+}
+
+#circle-image img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+#contact-texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 1em;
+}
+
+#infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=nav.css.map */

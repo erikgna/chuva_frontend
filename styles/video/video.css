@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700;900&display=swap");
+#grey-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.375em;
+  line-height: 1.25em;
+  color: #725c5c;
+}
+
+.orange-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.25em;
+  line-height: 125%;
+  color: #ed7839;
+  letter-spacing: 0.05em;
+}
+
+.orange-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.25em;
+  color: #ed7839;
+}
+
+.grey-text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.375em;
+  color: #725c5c;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+.big-grey-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.5625em;
+  color: #4e4e4e;
+}
+
+#see-more {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.3125em;
+  color: #ed7839;
+  cursor: pointer;
+}
+
+#video {
+  margin-top: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+#video #circle-avatar {
+  width: 4.5em;
+  height: 4.5em;
+  padding: 0.125em;
+  margin-right: 0.83em;
+  border-radius: 50%;
+  border: 0.125em solid #ed7839;
+}
+
+#video #overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2.6em;
+  padding-left: 2em;
+  padding-right: 1em;
+}
+
+#video #overlay h1 {
+  font-size: 1.4em;
+}
+
+#video #overlay h2 {
+  font-size: 1em;
+}
+
+#video #overlay h3 {
+  font-size: 0.83em;
+}
+
+#video #overlay > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#video #video-img {
+  background: url("https://s3-alpha-sig.figma.com/img/5bfb/31cb/42637d3b5568ea4df9235ef41b8fbf5b?Expires=1652659200&Signature=bIimAgO9sM8c5Ao~BZ5QmlGsdFzofyASsxr2kg1~Ow8Ftk96WzGRBrRIrTyOg91Gpg1Snb2BAoHhdidbtYNhFkmpvrMM328KKvy5Ursnh45Ah5PmCYs2LAKT1~zkpzAFg4sC6F0RpvaMnOTsy36Q5fD4OnFmc0C9CSqI9EeqJzS0QJjyOZwWQCYvgDs5YDy7im2WYgPfkhr6shGxy43gZxwcKU2-GasWmyEKr4v3J71Rq9rfQJx08GDDwKSaf8q16pIWdD4~xxpH6lY3GE-za81oAPcwx4NgvT2LC59vY2PdJ8ZtnHU98xJKhxwGp10ENDAeQuhbuRmDfapHCWAZMw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-size: cover;
+  width: 32.5em;
+  height: 18.291em;
+  position: relative;
+}
+
+#video #video-img * {
+  z-index: 10;
+}
+
+#video #video-img::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(141, 53, 6, 0.5);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+/*# sourceMappingURL=video.css.map */

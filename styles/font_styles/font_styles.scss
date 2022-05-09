@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700;900&display=swap");
+
+@import '../colors/colors';
+
+@mixin text-styles(
+  $family: "Roboto",
+  $weight: 500,
+  $size: 0.875em,
+  $line: 1.1875em,
+  $color: $text-grey-color
+) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+
+  color: $color;
+}
+
+#grey-title {
+    @include text-styles(
+      $weight: 400,
+      $size: 1.375em,
+      $line: 1.25em,
+      $color: $nav-title-grey
+    );
+  }
+  
+  .orange-title {
+    @include text-styles(
+      $weight: 900,
+      $size: 1.25em,
+      $line: 125%,
+      $color: $primary-color
+    );
+    letter-spacing: 0.05em;
+  }
+  
+  .orange-text {
+    @include text-styles(
+      $weight: 700,
+      $size: 1em,
+      $line: 1.25em,
+      $color: $primary-color
+    );
+  }
+  
+  .grey-text {
+    @include text-styles(
+      $family: "Quicksand",
+      $weight: 400,
+      $size: 0.875em,
+      $line: 1.375em,
+      $color: $nav-title-grey
+    );
+  }
+  
+  .bold {
+    font-weight: 700;
+  }
+  .small {
+    font-size: 0.75em;
+  }
+  
+  .big-grey-text {
+    @include text-styles(
+      $size: 1.25em,
+      $line: 1.5625em,
+      $color: $stronger-grey-color
+    );
+  }
+  
+  #see-more {
+    @include text-styles(
+      $family: "Quicksand",
+      $weight: 700,
+      $size: 0.875em,
+      $line: 1.3125em,
+      $color: $primary-color
+    );
+  
+    cursor: pointer;
+  }

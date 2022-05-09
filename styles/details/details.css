@@ -1,0 +1,71 @@
+#details-section {
+  margin-left: 2em;
+}
+
+#details-section #details-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#details-section #details-buttons div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#details-section #details-buttons div:first-child button:nth-child(2) {
+  margin: 0 0.5em;
+}
+
+#details-section .orange-text {
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+}
+
+#details-section #details-component {
+  width: 15.125em;
+  border: 1px solid #ececec;
+  border-radius: 0.1875em;
+}
+
+#details-section #details-component .big-grey-text {
+  margin-top: .5em;
+  margin-left: .75em;
+}
+
+#details-section #details-component div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1em;
+  padding-right: 0.4em;
+  padding-bottom: 1em;
+}
+
+#details-section #details-component div:last-child #low-grey {
+  background: #e7e7e7;
+  width: 0.125em;
+  height: 20em;
+  padding: 0;
+  margin-left: 0.5em;
+}
+
+#details-section #details-component div:last-child #low-grey #strong-grey {
+  background: #bfbfbf;
+  width: 0.125em;
+  height: 12.5em;
+  padding: 0;
+}
+
+#details-section #details-component #authors {
+  margin: 1em 0;
+}
+/*# sourceMappingURL=details.css.map */

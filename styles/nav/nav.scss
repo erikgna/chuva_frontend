@@ -1,0 +1,92 @@
+@import '../font_styles/font_styles';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+  
+    height: 4.25em;
+  
+    padding: 0 2em;
+    margin-bottom: 1.5em;
+  
+    background: $background-color;
+  
+    #user-info-section {
+      display: flex;
+      align-items: center;
+
+      #select {
+        height: 2em;
+      
+        padding: 0 0.5em;
+        border-radius: 0.125em;
+      
+        display: flex;
+        align-items: center;
+        outline: none;
+        background: $background-color;
+        border: 0.0416em solid #cccccc;
+      
+        select {
+          border: none;
+          outline: none;
+          background: $background-color;
+      
+          font-size: 14px;
+          font-family: "Quicksand";
+          line-height: 17.5px;
+          font-weight: 400;
+          color: $text-grey-color;
+      
+          margin-left: 4px;
+        }
+      }
+  
+      small {
+        font-size: 0.75em;
+        line-height: 0.9375em;
+      }
+    }
+  }
+
+  #circle-image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  
+    #circle-counter {
+      top: 0.5em;
+      position: relative;
+  
+      width: 1.15em;
+      height: 1.15em;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      border-radius: 50%;
+  
+      background: #f85959;
+  
+      @include text-styles("Roboto", 700, 0.625em, 0.75em, #fff);
+    }
+  
+    img {
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+    }
+  }
+
+  #contact-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 1em;
+  }
+
+  #infos {
+    display: flex;
+    align-items: center;
+  }

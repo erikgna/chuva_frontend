@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700;900&display=swap");
+#grey-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.375em;
+  line-height: 1.25em;
+  color: #725c5c;
+}
+
+.orange-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.25em;
+  line-height: 125%;
+  color: #ed7839;
+  letter-spacing: 0.05em;
+}
+
+.orange-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.25em;
+  color: #ed7839;
+}
+
+.grey-text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.375em;
+  color: #725c5c;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+.big-grey-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.5625em;
+  color: #4e4e4e;
+}
+
+#see-more {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.3125em;
+  color: #ed7839;
+  cursor: pointer;
+}
+
+#side-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 13.75em;
+}
+
+#side-navigation #logo-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 13.75em;
+  height: 4.25em;
+  background: #ffb354;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffb354), to(#ee7a3a));
+  background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
+  padding: 0 1.5em;
+}
+
+#side-navigation #logo-section h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.875em;
+  line-height: 2.1875em;
+  color: #fff;
+}
+
+#side-navigation #links {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+
+#side-navigation #links li {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 0.9375em;
+  line-height: 1.1875em;
+  color: #725c5c;
+  border-bottom: 0.125em solid #e7e7e7;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1.5em;
+  cursor: pointer;
+}
+
+#side-navigation #links .active {
+  border-left-width: 0.3125em;
+  border-right-width: 0;
+  border-style: solid;
+  -o-border-image: linear-gradient(to top, #ffb354, #ee7a3a) 1 100%;
+     border-image: -webkit-gradient(linear, left bottom, left top, from(#ffb354), to(#ee7a3a)) 1 100%;
+     border-image: linear-gradient(to top, #ffb354, #ee7a3a) 1 100%;
+  background: #fdf1eb;
+}
+/*# sourceMappingURL=side_navigation.css.map */
