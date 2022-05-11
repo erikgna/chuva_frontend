@@ -1,20 +1,21 @@
 @import '../font_styles/font_styles';
 
 #video {
-    margin-top: 1em;
-  
-    @include text-styles($size: 1.5em, $weight: 900, $line: 1.5em, $color: #fff);
-    #circle-avatar {
-      width: 4.5em;
-      height: 4.5em;
-  
-      padding: 0.125em;
-      margin-right: 0.83em;
-  
-      border-radius: 50%;
-      border: 0.125em solid #ed7839;
+  margin-top: 1em;
+
+  @include text-styles($size: 1.5em, $weight: 900, $line: 1.5em, $color: #fff);
+
+  #video-img {
+    background: url("https://s3-alpha-sig.figma.com/img/5bfb/31cb/42637d3b5568ea4df9235ef41b8fbf5b?Expires=1652659200&Signature=bIimAgO9sM8c5Ao~BZ5QmlGsdFzofyASsxr2kg1~Ow8Ftk96WzGRBrRIrTyOg91Gpg1Snb2BAoHhdidbtYNhFkmpvrMM328KKvy5Ursnh45Ah5PmCYs2LAKT1~zkpzAFg4sC6F0RpvaMnOTsy36Q5fD4OnFmc0C9CSqI9EeqJzS0QJjyOZwWQCYvgDs5YDy7im2WYgPfkhr6shGxy43gZxwcKU2-GasWmyEKr4v3J71Rq9rfQJx08GDDwKSaf8q16pIWdD4~xxpH6lY3GE-za81oAPcwx4NgvT2LC59vY2PdJ8ZtnHU98xJKhxwGp10ENDAeQuhbuRmDfapHCWAZMw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+    background-size: cover;
+    width: 32.5em;
+    height: 18.291em;
+    position: relative;
+
+    * {
+      z-index: 10;
     }
-  
+
     #overlay {
       display: flex;
       flex-direction: column;
@@ -41,29 +42,30 @@
         display: flex;
         align-items: center;
       }
-    }
-  
-    #video-img {
-      background: url("https://s3-alpha-sig.figma.com/img/5bfb/31cb/42637d3b5568ea4df9235ef41b8fbf5b?Expires=1652659200&Signature=bIimAgO9sM8c5Ao~BZ5QmlGsdFzofyASsxr2kg1~Ow8Ftk96WzGRBrRIrTyOg91Gpg1Snb2BAoHhdidbtYNhFkmpvrMM328KKvy5Ursnh45Ah5PmCYs2LAKT1~zkpzAFg4sC6F0RpvaMnOTsy36Q5fD4OnFmc0C9CSqI9EeqJzS0QJjyOZwWQCYvgDs5YDy7im2WYgPfkhr6shGxy43gZxwcKU2-GasWmyEKr4v3J71Rq9rfQJx08GDDwKSaf8q16pIWdD4~xxpH6lY3GE-za81oAPcwx4NgvT2LC59vY2PdJ8ZtnHU98xJKhxwGp10ENDAeQuhbuRmDfapHCWAZMw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
-      background-size: cover;
-      width: 32.5em;
-      height: 18.291em;
-      position: relative;
-  
-      * {
-        z-index: 10;
+
+      #circle-avatar {
+        width: 4.5em;
+        height: 4.5em;
+    
+        padding: 0.125em;
+        margin-right: 0.83em;
+    
+        border-radius: 50%;
+        border: 0.125em solid #ed7839;
       }
     }
-    #video-img::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(141, 53, 6, 0.5);
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
   }
+  
+  #video-img::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(141, 53, 6, 0.5);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}

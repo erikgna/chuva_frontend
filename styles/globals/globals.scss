@@ -1,62 +1,62 @@
 @import '../font_styles/font_styles';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  #principal {
-    display: flex;
-    margin: 0 auto;
-    max-width: 85.375em;
-  }
-  
-  #body-section {
-    display: flex;
-  
-    padding-right: 2em;
-    padding-left: 2.5em;
-  }
-  
-  .orange-button {
-    display: flex;
-    align-items: center;
-  
-    font-size: 1em;
-    color: #fff;
-    line-height: 1.0675em;
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
-  
-    background: $primary-color;
-    border: none;
-    border-radius: 0.25em;
-  
-    outline: none;
-  
-    padding: 0.5em 1em;
-  
-    cursor: pointer;
-  }
-  
-  .icon {
-    color: #fff;
-  
-    font-size: 1em;
-    line-height: 1.375em;
-    letter-spacing: 0.01em;
-  }
-  
-  #send-button {
-    min-width: 11.7em !important;
-  }
+#principal {
+  display: flex;
+  margin: 0 auto;
+  max-width: 85.375em;
+}
 
-  footer {
-    display: flex;
-    justify-content: center;
-  
-    margin-top: 2.33em;
-  }
+#body-section {
+  display: flex;
+
+  padding-right: 2em;
+  padding-left: 2.5em;
+}
+
+.orange-button {
+  display: flex;
+  align-items: center;
+
+  font-size: 1em;
+  color: #fff;
+  line-height: 1.0675em;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+
+  background: $primary-color;
+  border: none;
+  border-radius: 0.25em;
+
+  outline: none;
+
+  padding: 0.5em 1em;
+
+  cursor: pointer;
+}
+
+.icon {
+  color: #fff;
+
+  font-size: 1em;
+  line-height: 1.375em;
+  letter-spacing: 0.01em;
+}
+
+#send-button {
+  min-width: 11.7em !important;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 2.33em;
+}
   
   
